@@ -1,1 +1,400 @@
-# resume
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregory Oikonomakos | Technical Sales</title>
+    
+    <!-- 1. Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Configure Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        amber: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 3. Load Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 4. Load Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+        .animation-delay-2000 { animation-delay: 2s; }
+    </style>
+</head>
+<!-- Increased base font size here -->
+<body class="bg-[#FAFAF9] text-stone-800 selection:bg-amber-200 selection:text-stone-900 antialiased text-base md:text-lg">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FAFAF9]/90 backdrop-blur-md border-b border-stone-200/50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="text-xl font-bold tracking-tight text-stone-900 font-serif">
+                    Gregory<span class="text-amber-600">.</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#story" class="text-stone-600 hover:text-stone-900 font-medium text-sm hover:bg-stone-100 px-3 py-2 rounded-lg transition-all">My Story</a>
+                    <a href="#work" class="text-stone-600 hover:text-stone-900 font-medium text-sm hover:bg-stone-100 px-3 py-2 rounded-lg transition-all">Work</a>
+                    <a href="#mindset" class="text-stone-600 hover:text-stone-900 font-medium text-sm hover:bg-stone-100 px-3 py-2 rounded-lg transition-all">Mindset</a>
+                    <a href="#contact" class="bg-stone-900 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-stone-800 transition-all">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-stone-600">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 shadow-lg">
+            <a href="#story" class="block py-3 text-stone-600 border-b border-stone-100">My Story</a>
+            <a href="#work" class="block py-3 text-stone-600 border-b border-stone-100">Work</a>
+            <a href="#mindset" class="block py-3 text-stone-600 border-b border-stone-100">Mindset</a>
+            <a href="#contact" class="block py-3 text-stone-900 font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="order-2 md:order-1">
+                <div class="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                    Open to SaaS & Data Roles
+                </div>
+                <!-- Increased Title Size -->
+                <h1 class="text-4xl md:text-6xl font-bold text-stone-900 mb-6 leading-tight">
+                    Building relationships,<br /> 
+                    <span class="text-stone-500 italic font-light">backed by data.</span>
+                </h1>
+                <!-- Increased Paragraph Size -->
+                <p class="text-lg text-stone-600 mb-8 leading-relaxed max-w-md">
+                    I'm a Mechanical Engineer turned Sales Professional. I believe the best business deals aren't just about numbers—they're about understanding the human problems behind the data.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-12">
+                    <a href="#contact" class="px-8 py-3 bg-stone-900 text-white rounded-xl font-medium hover:bg-stone-800 transition-all shadow-xl shadow-stone-900/20 flex items-center gap-2 text-base">
+                        Let's Talk <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/oikonomakosg" target="_blank" class="px-8 py-3 bg-white text-stone-700 border border-stone-300 rounded-xl font-medium hover:bg-stone-50 transition-all flex items-center gap-2 text-base">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="flex gap-4 flex-wrap">
+                    <div class="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl shadow-sm border border-stone-200">
+                        <div class="p-2 bg-amber-50 rounded-full text-amber-600">
+                            <i data-lucide="trending-up" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-stone-900 leading-none text-lg">€500k+</div>
+                            <div class="text-xs text-stone-500 font-bold mt-1 uppercase tracking-wide">Contracts Closed</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl shadow-sm border border-stone-200">
+                        <div class="p-2 bg-amber-50 rounded-full text-amber-600">
+                            <i data-lucide="heart" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-stone-900 leading-none text-lg">98%</div>
+                            <div class="text-xs text-stone-500 font-bold mt-1 uppercase tracking-wide">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image/Visual -->
+            <div class="order-1 md:order-2 flex justify-center md:justify-end relative">
+                <!-- KEPT COMPACT SIZE (w-80) -->
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <!-- Animated Blobs -->
+                    <div class="absolute inset-0 bg-amber-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
+                    <div class="absolute top-0 -right-4 w-64 h-64 bg-stone-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+                    
+                    <!-- Image Container -->
+                    <div class="relative w-full h-full rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl rotate-3 bg-stone-200 flex items-center justify-center group cursor-pointer transition-transform hover:rotate-0 duration-500">
+                        <!-- YOUR PHOTO -->
+                        <img src="profile.jpg" alt="Gregory Oikonomakos" class="w-full h-full object-cover">
+                        
+                        <div class="absolute bottom-0 w-full bg-gradient-to-t from-stone-900/60 to-transparent p-6">
+                            <div class="text-white text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i> Athens based
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Journey Section -->
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-serif">How I got here</h2>
+            
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-stone-200 before:bg-gradient-to-b before:from-transparent before:via-stone-200 before:to-transparent">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-100 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-stone-500">
+                        <i data-lucide="settings" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-[#FAFAF9] p-6 rounded-2xl border border-stone-100 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-stone-900 text-lg">The Engineering Foundation</span>
+                            <span class="text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1 rounded-full">2021</span>
+                        </div>
+                        <p class="text-stone-600 text-base leading-relaxed">
+                            Started my Integrated Master's in Mechanical Engineering. This taught me how to deconstruct complex systems and think logically.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:flex-row group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-100 shadow shrink-0 md:order-1 md:translate-x-1/2 z-10 text-stone-500">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-[#FAFAF9] p-6 rounded-2xl border border-stone-100 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-stone-900 text-lg">The Entrepreneurial Spark</span>
+                            <span class="text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1 rounded-full">2022</span>
+                        </div>
+                        <p class="text-stone-600 text-base leading-relaxed">
+                            Launched WoombaCases. I didn't just build a store; I learned how to listen to a market, analyzing traffic data to turn visitors into customers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-100 shadow shrink-0 md:order-1 md:-translate-x-1/2 z-10 text-stone-500">
+                        <i data-lucide="anchor" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-[#FAFAF9] p-6 rounded-2xl border border-stone-100 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-stone-900 text-lg">The Professional Leap</span>
+                            <span class="text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1 rounded-full">2023</span>
+                        </div>
+                        <p class="text-stone-600 text-base leading-relaxed">
+                            Joined Cool Ship Supplies S.A. in the high-pressure logistics world. Here, I learned that data helps you prepare, but empathy helps you close.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Card -->
+            <div class="bg-stone-100 p-8 rounded-3xl relative mt-12 italic text-stone-600 border-l-4 border-amber-500/50">
+                <i data-lucide="quote" class="w-8 h-8 text-amber-500/30 absolute top-6 left-6 -translate-x-2 -translate-y-2"></i>
+                <p class="relative z-10 text-xl leading-relaxed">
+                    "Engineering taught me how things work. Sales taught me how people work. 
+                    I love the intersection where a technical solution actually makes someone's life better."
+                </p>
+                <div class="mt-4 font-bold text-stone-900 not-italic text-xs uppercase tracking-wide">— My Philosophy</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px bg-stone-300 flex-1"></div>
+                <h2 class="text-3xl font-serif font-bold text-stone-900">Work Experience</h2>
+                <div class="h-px bg-stone-300 flex-1"></div>
+            </div>
+
+            <!-- Job Card -->
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-stone-200/50 border border-stone-100">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-stone-900">Port Team Sales Representative</h3>
+                        <div class="text-lg text-stone-500 font-medium flex items-center gap-2">
+                            Cool Ship Supplies S.A. <span class="text-stone-300">•</span> Piraeus, Greece
+                        </div>
+                    </div>
+                    <span class="px-4 py-2 bg-stone-100 text-stone-600 rounded-full text-sm font-medium">
+                        March 2023 - Current
+                    </span>
+                </div>
+
+                <div class="prose prose-stone prose-lg mb-8 text-stone-600 leading-loose">
+                    <p>
+                        In the maritime supply industry, trust is everything. A ship captain needs to know you have their back. I used my technical background to analyze supply patterns, predicting what clients needed before they asked.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-[#FAFAF9] p-6 rounded-2xl">
+                        <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm font-medium text-stone-800 leading-relaxed">
+                            Built relationships leading to €500k+ in annual contracts.
+                        </p>
+                    </div>
+                    <div class="bg-[#FAFAF9] p-6 rounded-2xl">
+                        <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm font-medium text-stone-800 leading-relaxed">
+                            Maintained a 98% client satisfaction score by being proactive.
+                        </p>
+                    </div>
+                    <div class="bg-[#FAFAF9] p-6 rounded-2xl">
+                        <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm font-medium text-stone-800 leading-relaxed">
+                            Used data insights to make logistics 20% more efficient.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mindset Section -->
+    <section id="mindset" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">The Strategic Mindset</h2>
+                <p class="text-stone-500">
+                    Sales isn't just a job; it's a discipline. Here is how I stay ahead of the curve.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group p-8 rounded-3xl bg-[#FAFAF9] hover:bg-white border border-transparent hover:border-stone-200 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600 transition-transform group-hover:scale-110">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">SaaS Trends</h3>
+                    <p class="text-stone-600 leading-relaxed text-sm">
+                        I don't just sell software; I study the ecosystem. From PLG to AI in CRMs, I speak the language of tech decision-makers.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 rounded-3xl bg-[#FAFAF9] hover:bg-white border border-transparent hover:border-stone-200 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 transition-transform group-hover:scale-110">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">Data Analytics</h3>
+                    <p class="text-stone-600 leading-relaxed text-sm">
+                        Numbers are my second language. I use data to forecast territory health and prioritize leads that actually convert.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 rounded-3xl bg-[#FAFAF9] hover:bg-white border border-transparent hover:border-stone-200 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 text-purple-600 transition-transform group-hover:scale-110">
+                        <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">Strategy Games</h3>
+                    <p class="text-stone-600 leading-relaxed text-sm">
+                        High-level strategy games teach resource management and competitor anticipation—skills that apply directly to B2B deals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-stone-900 text-stone-300 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="w-16 h-16 bg-stone-800 rounded-full flex items-center justify-center mx-auto mb-8">
+                <i data-lucide="coffee" class="w-6 h-6 text-amber-500"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+                Let's start a conversation.
+            </h2>
+            <p class="text-lg text-stone-400 mb-12 max-w-xl mx-auto">
+                I'm currently looking for opportunities where I can bring my technical mindset to a sales team. If that sounds like what you need, I'd love to chat.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-4 max-w-lg mx-auto mb-16">
+                <a href="https://calendly.com/gregorygate46/30min" target="_blank" class="flex items-center justify-center gap-3 p-4 bg-stone-800 rounded-xl hover:bg-stone-700 transition-colors group">
+                    <i data-lucide="calendar" class="w-5 h-5 text-amber-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium text-white">Book a 30min Call</span>
+                </a>
+                <a href="tel:+306983066313" class="flex items-center justify-center gap-3 p-4 bg-stone-800 rounded-xl hover:bg-stone-700 transition-colors group">
+                    <i data-lucide="phone" class="w-5 h-5 text-amber-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium text-white">+30 698 306 6313</span>
+                </a>
+            </div>
+
+            <div class="border-t border-stone-800 pt-12 text-center">
+                <div class="text-stone-600 text-sm">
+                    © 2025 Gregory Oikonomakos. Designed to Convert.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll close menu
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
